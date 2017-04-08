@@ -4,6 +4,11 @@ Also adds a method for showing/hiding the clamped text via a dynamically injecte
 
 **Interactive Demo** https://jakedowns.github.io/ellipsizer/
 
+## available on npm
+`npm install ellipsizer`
+
+[ellipsizer on npm](https://www.npmjs.com/package/ellipsizer)
+
 ## usage
 See index.html for an example.
 
@@ -34,4 +39,5 @@ $('.example-js-overflow').ellipsize({
 ## related
 - [per-word-action](https://www.npmjs.com/package/per-word-action) (Dependency)
 - [jquery-ellipsis](https://github.com/STAR-ZERO/jquery-ellipsis) (Previous Art, Abandoned)
+- [clamp.js](https://github.com/josephschmitt/Clamp.js) (Inspiration)
 
