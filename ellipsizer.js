@@ -53,19 +53,19 @@ $.fn.ellipsize = function(options){
 
     $this.find('.elli-overflow').hide();
     $('<span class="elli-read-more"><span class="elli-char">'+opts.ellipsisHtml+'</span> <a class="elli-toggle-more" style="cursor:pointer; display:block; margin-top:10px;">' + opts.readMoreHtml + '</a><br/></span>').insertBefore('.elli-overflow:first');
-    $('<span class="elli-read-less" style="display:none;"><a class="elli-toggle-less" style="cursor:pointer; display:block; margin-top:10px;">' + opts.readMoreHtml + '</a><br/></span>').insertAfter('.elli-overflow:last');
+    $('<span class="elli-read-less" style="display:none;"><a class="elli-toggle-less" style="cursor:pointer; display:block; margin-top:10px;">' + opts.readLessHtml + '</a><br/></span>').insertAfter('.elli-overflow:last');
 
     $(document).on('click.elli', '.elli-toggle-more', function(){
       $this.find('.elli-overflow').show();
-      $('.elli-read-more').hide();
-      $('.elli-read-less').fadeIn();
+      $this.find('.elli-read-more').hide();
+      $this.find('.elli-read-less').fadeIn();
       opts.onReadMore.call();
     });
 
     $(document).on('click.elli', '.elli-toggle-less', function(){
       $this.find('.elli-overflow').hide();
-      $('.elli-read-more').fadeIn();
-      $('.elli-read-less').hide();
+      $this.find('.elli-read-more').fadeIn();
+      $this.find('.elli-read-less').hide();
       opts.onReadLess.call();
     });
   }
