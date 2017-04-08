@@ -1,0 +1,138 @@
+<html>
+<head>
+    <title>ellipsizer demo</title>
+    <style>
+        html, body {
+            background-color: #333;
+            color: #eee;
+        }
+        body { padding: 20px; }
+        p {
+            line-height: 25px;
+            font-size: 16px;
+        }
+    </style>
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="ellipsizer.js"></script>
+    <script>
+        // wait for DOM ready
+        $(document).ready(function(){
+            console.log('domready');
+        });
+    </script>
+</head>
+<body>
+<div id="content">
+    <h1>Responsive Demo of Overflow: Ellipsis with nested Block-level elements</h1>
+    <h2>Here's our JS-supplemented example:</h2>
+
+    <div class="example-1">
+        <p>Nulla porttitor accumsan tincidunt. Curabitur aliquet quam id dui posuere
+            blandit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel,
+            ullamcorper sit amet ligula. Sed porttitor lectus nibh. Mauris blandit
+            aliquet elit, eget tincidunt nibh pulvinar a. Sed porttitor lectus nibh.
+            Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus
+            suscipit tortor eget felis porttitor volutpat. Curabitur arcu erat, accumsan
+            id imperdiet et, porttitor at sem. Curabitur arcu erat, accumsan id
+            imperdiet et, porttitor at sem.</p>
+
+        <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Proin
+            eget tortor risus. Quisque velit nisi, pretium ut lacinia in, elementum id
+            enim. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.
+            Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus
+            suscipit tortor eget felis porttitor volutpat. Pellentesque in ipsum id orci
+            porta dapibus. Nulla porttitor accumsan tincidunt. Vestibulum ac diam sit
+            amet quam vehicula elementum sed sit amet dui. Cras ultricies ligula sed
+            magna dictum porta.</p>
+
+        <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Mauris
+            blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit
+            tortor eget felis porttitor volutpat. Vestibulum ac diam sit amet quam
+            vehicula elementum sed sit amet dui. Curabitur arcu erat, accumsan id
+            imperdiet et, porttitor at sem. Vivamus magna justo, lacinia eget
+            consectetur sed, convallis at tellus. Quisque velit nisi, pretium ut lacinia
+            in, elementum id enim. Nulla porttitor accumsan tincidunt. Nulla quis lorem
+            ut libero malesuada feugiat. Praesent sapien massa, convallis a pellentesque
+            nec, egestas non nisi.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultricies
+            ligula sed magna dictum porta. Donec sollicitudin molestie malesuada.
+            Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.
+            Quisque velit nisi, pretium ut lacinia in, elementum id enim. Mauris blandit
+            aliquet elit, eget tincidunt nibh pulvinar a. Sed porttitor lectus nibh.
+            Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Praesent sapien
+            massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum
+            primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec
+            velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</p>
+
+        <p>Vivamus suscipit tortor eget felis porttitor volutpat. Proin eget tortor
+            risus. Sed porttitor lectus nibh. Vivamus magna justo, lacinia eget
+            consectetur sed, convallis at tellus. Curabitur non nulla sit amet nisl
+            tempus convallis quis ac lectus. Curabitur non nulla sit amet nisl tempus
+            convallis quis ac lectus. Quisque velit nisi, pretium ut lacinia in,
+            elementum id enim. Vivamus magna justo, lacinia eget consectetur sed,
+            convallis at tellus. Cras ultricies ligula sed magna dictum porta. Cras
+            ultricies ligula sed magna dictum porta.</p>
+    </div>
+
+    <hr>
+
+    <h2>Here's a CSS example that fails:</h2>
+
+    <div class="example-2">
+        <p>Nulla porttitor accumsan tincidunt. Curabitur aliquet quam id dui posuere
+            blandit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel,
+            ullamcorper sit amet ligula. Sed porttitor lectus nibh. Mauris blandit
+            aliquet elit, eget tincidunt nibh pulvinar a. Sed porttitor lectus nibh.
+            Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus
+            suscipit tortor eget felis porttitor volutpat. Curabitur arcu erat, accumsan
+            id imperdiet et, porttitor at sem. Curabitur arcu erat, accumsan id
+            imperdiet et, porttitor at sem.</p>
+
+        <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Proin
+            eget tortor risus. Quisque velit nisi, pretium ut lacinia in, elementum id
+            enim. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.
+            Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus
+            suscipit tortor eget felis porttitor volutpat. Pellentesque in ipsum id orci
+            porta dapibus. Nulla porttitor accumsan tincidunt. Vestibulum ac diam sit
+            amet quam vehicula elementum sed sit amet dui. Cras ultricies ligula sed
+            magna dictum porta.</p>
+
+        <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Mauris
+            blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit
+            tortor eget felis porttitor volutpat. Vestibulum ac diam sit amet quam
+            vehicula elementum sed sit amet dui. Curabitur arcu erat, accumsan id
+            imperdiet et, porttitor at sem. Vivamus magna justo, lacinia eget
+            consectetur sed, convallis at tellus. Quisque velit nisi, pretium ut lacinia
+            in, elementum id enim. Nulla porttitor accumsan tincidunt. Nulla quis lorem
+            ut libero malesuada feugiat. Praesent sapien massa, convallis a pellentesque
+            nec, egestas non nisi.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultricies
+            ligula sed magna dictum porta. Donec sollicitudin molestie malesuada.
+            Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.
+            Quisque velit nisi, pretium ut lacinia in, elementum id enim. Mauris blandit
+            aliquet elit, eget tincidunt nibh pulvinar a. Sed porttitor lectus nibh.
+            Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Praesent sapien
+            massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum
+            primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec
+            velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</p>
+
+        <p>Vivamus suscipit tortor eget felis porttitor volutpat. Proin eget tortor
+            risus. Sed porttitor lectus nibh. Vivamus magna justo, lacinia eget
+            consectetur sed, convallis at tellus. Curabitur non nulla sit amet nisl
+            tempus convallis quis ac lectus. Curabitur non nulla sit amet nisl tempus
+            convallis quis ac lectus. Quisque velit nisi, pretium ut lacinia in,
+            elementum id enim. Vivamus magna justo, lacinia eget consectetur sed,
+            convallis at tellus. Cras ultricies ligula sed magna dictum porta. Cras
+            ultricies ligula sed magna dictum porta.</p>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "ellipsizer",
+  "version": "1.0.0",
+  "description": "A JS method for ellipsizing elements which contain nested block elements",
+  "main": "ellipsizer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jakedowns/ellipsizer.git"
+  },
+  "keywords": [
+    "text-overflow-ellipsis"
+  ],
+  "author": "Jake Downs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jakedowns/ellipsizer/issues"
+  },
+  "homepage": "https://github.com/jakedowns/ellipsizer#readme"
+}
