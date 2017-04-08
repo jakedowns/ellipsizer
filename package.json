@@ -18,5 +18,14 @@
   "bugs": {
     "url": "https://github.com/jakedowns/ellipsizer/issues"
   },
-  "homepage": "https://github.com/jakedowns/ellipsizer#readme"
+  "homepage": "https://github.com/jakedowns/ellipsizer#readme",
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^6.4.1",
+    "babel-preset-env": "^1.3.3",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "underscore": "^1.8.3",
+    "webpack": "^2.3.3"
+  }
 }
