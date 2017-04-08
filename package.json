@@ -1,6 +1,6 @@
 {
   "name": "ellipsizer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A JS method for ellipsizing elements which contain nested block elements",
   "main": "dist/ellipsizer.bundle.js",
   "scripts": {
