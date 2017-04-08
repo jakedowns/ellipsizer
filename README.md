@@ -1,5 +1,6 @@
 # ellipsizer
 A JS method for ellipsizing elements which contain nested block-level elements (edge case not supported by text-overflow: ellipsis)
+Also adds a method for showing/hiding the clamped text via a dynamically injected set of Read More / Read Less links 
 
 **Interactive Demo** https://jakedowns.github.io/ellipsizer/
 
