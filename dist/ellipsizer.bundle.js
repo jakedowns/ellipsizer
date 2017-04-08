@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -102,6 +102,7 @@ $.fn.ellipsize = function (options) {
 
   var opts = _extends({}, default_options, options);
 
+  $(document).off('.elli');
   this.find('.elli-overflow').show().removeClass('elli-overflow');
   this.find('.elli-read-more, .elli-read-less').remove();
 
@@ -114,7 +115,7 @@ $.fn.ellipsize = function (options) {
     last_line = Math.max(last_line, line_number);
   });
 
-  console.log(last_line, opts.maxLines);
+  // console.log(last_line, opts.maxLines);
 
   // var clamped_els = this.find('.elli-overflow');
   if (last_line - opts.maxLines > opts.overflowLineCountThreshold) {
@@ -129,14 +130,14 @@ $.fn.ellipsize = function (options) {
     $('<span class="elli-read-more"><span class="elli-char">' + opts.ellipsisHtml + '</span> <a class="elli-toggle-more" style="cursor:pointer; display:block; margin-top:10px;">' + opts.readMoreHtml + '</a><br/></span>').insertBefore('.elli-overflow:first');
     $('<span class="elli-read-less" style="display:none;"><a class="elli-toggle-less" style="cursor:pointer; display:block; margin-top:10px;">' + opts.readMoreHtml + '</a><br/></span>').insertAfter('.elli-overflow:last');
 
-    $(document).on('click', '.elli-toggle-more', function () {
+    $(document).on('click.elli', '.elli-toggle-more', function () {
       $this.find('.elli-overflow').show();
       $('.elli-read-more').hide();
       $('.elli-read-less').fadeIn();
       opts.onReadMore.call();
     });
 
-    $(document).on('click', '.elli-toggle-less', function () {
+    $(document).on('click.elli', '.elli-toggle-less', function () {
       $this.find('.elli-overflow').hide();
       $('.elli-read-more').fadeIn();
       $('.elli-read-less').hide();
@@ -211,8 +212,7 @@ $.fn.ellipsize = function (options) {
 })();
 
 /***/ }),
-/* 2 */,
-/* 3 */
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(0);

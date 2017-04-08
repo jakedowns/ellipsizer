@@ -5,7 +5,7 @@ module.exports = {
   entry: ['./ellipsizer.js'],
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: "ellipsizer.min.js"
+    filename: "ellipsizer.bundle.js"
   },
   module: {
     loaders: [
